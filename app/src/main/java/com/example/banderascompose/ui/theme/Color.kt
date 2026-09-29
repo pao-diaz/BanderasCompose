@@ -12,3 +12,5 @@ val Pink40 = Color(0xFF7D5260)
 
 val verde_mexico = Color(0xFF006341)
 val rojo_mexico = Color(0xFFBB0B1D)
+val AzulFrancia = Color(0xFF002395)
+val RojoFrancia = Color(0xFFED2939)
