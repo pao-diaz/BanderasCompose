@@ -23,3 +23,19 @@ val AmarilloAlemania = Color(0xFFFFCC00)
 // Colores - España
 val RojoEspana = Color(0xFFAA1515)
 val AmarilloEspana = Color(0xFFF1BF00)
+val AzulArgentina = Color(0xFF74ACDF)
+val Blanco = Color(0xFFFFFFFF)
+
+
+// Colores generales
+val Rojo = Color(0xFFFF0000)
+val Azul = Color(0xFF0000FF)
+
+// Brasil
+val VerdeBrasil = Color(0xFF009C3B)
+val AmarilloBrasil = Color(0xFFFFDF00)
+
+// Estados Unidos
+val RojoEUA = Color(0xFFB22234)
+val AzulEUA = Color(0xFF3C3B6E)
+
