@@ -24,3 +24,9 @@ val AmarilloAlemania = Color(0xFFFFCC00)
 val RojoEspana = Color(0xFFAA1515)
 val AmarilloEspana = Color(0xFFF1BF00)
 
+// Colores - Colombia
+val AmarilloColombia = Color(0xFFFCD116)
+val AzulColombia = Color(0xFF003893)
+val RojoColombia = Color(0xFFCE1126)
+
+
