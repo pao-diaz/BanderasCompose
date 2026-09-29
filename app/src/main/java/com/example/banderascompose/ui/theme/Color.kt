@@ -14,3 +14,6 @@ val verde_mexico = Color(0xFF006341)
 val rojo_mexico = Color(0xFFBB0B1D)
 val AzulFrancia = Color(0xFF002395)
 val RojoFrancia = Color(0xFFED2939)
+// Colores de Italia
+val VerdeItalia = Color(0xFF009246)
+val RojoItalia = Color(0xFFCE2B37)
