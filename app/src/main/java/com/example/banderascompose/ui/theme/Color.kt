@@ -17,3 +17,6 @@ val RojoFrancia = Color(0xFFED2939)
 // Colores de Italia
 val VerdeItalia = Color(0xFF009246)
 val RojoItalia = Color(0xFFCE2B37)
+// Colores - Alemania
+val RojoAlemania = Color(0xFFDD0000)
+val AmarilloAlemania = Color(0xFFFFCC00)
