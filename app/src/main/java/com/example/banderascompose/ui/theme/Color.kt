@@ -20,3 +20,7 @@ val RojoItalia = Color(0xFFCE2B37)
 // Colores - Alemania
 val RojoAlemania = Color(0xFFDD0000)
 val AmarilloAlemania = Color(0xFFFFCC00)
+// Colores - España
+val RojoEspana = Color(0xFFAA1515)
+val AmarilloEspana = Color(0xFFF1BF00)
+
