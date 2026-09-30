@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verde_mexico">#006341</color>
+    <color name="azul_francia">#FF0055A4</color>
+    <color name="rojo_francia">#FFEF4135</color>
+    <color name="verde_Italia">#009246</color>
+    <color name="amarillo_alemania">#FFFFCE00</color>
+    <color name="rojo_alemania">#FFDD0000</color>
+    <color name="rojo_espana">#FFAA151B</color>
+    <color name="amarillo_espana">#FFF1BF00</color>
+    <color name="amarillo_colombia">#FFCD00</color>
+    <color name="azul_colombia">#003087</color>
+    <color name="rojo_colombia">#C8102E</color>
+    <color name="azul_argentina">#75AADB</color>
+    <color name="verde_brasil">#FF009B3A</color>
+    <color name="amarillo_brasil">#FFFEDF00</color>
+    <color name="azul_EUA">#FF002868</color>
+    <color name="rojo_EUA">#FFBF0A30</color>
 </resources>
