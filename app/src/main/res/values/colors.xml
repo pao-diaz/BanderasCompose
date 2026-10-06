@@ -18,4 +18,27 @@
     <color name="amarillo_brasil">#FFFEDF00</color>
     <color name="azul_EUA">#FF002868</color>
     <color name="rojo_EUA">#FFBF0A30</color>
+    <color name="rojo_suiza">#FFD52B1E</color>
+    <color name="rojo_turquia">#FFE30A17</color>
+    <color name="azul_israel">#FF0038B8</color>
+    <color name="azul_cuba">#FF002E6E</color>
+    <color name="rojo_cuba">#FFCB1428</color>
+    <color name="azul_seychelles">#003D88</color>
+    <color name="amarillo_seychelles">#FCD116</color>
+    <color name="rojo_seychelles">#D21034</color>
+    <color name="verde_seychelles">#007A3D</color>
+    <color name="rojo_papua">#C8102E</color>
+    <color name="amarillo_papua">#FFCD00</color>
+    <color name="azul_reino">#012169</color>
+    <color name="verde_sudafrica">#007749</color>
+    <color name="amarillo_sudafrica">#FFB81C</color>
+    <color name="azul_sudafrica">#001489</color>
+    <color name="amarillo_butan">#FFCD00</color>
+    <color name="naranja_butan">#FF6720</color>
+    <color name="rojo_nepal">#DC143C</color>
+    <color name="azul_nepal">#003893</color>
+    <color name="amarillo_kiribati">#FFD100</color>
+    <color name="rojo_kiribati">#EF3340</color>
+    <color name="azul_kiribati">#0032A0</color>
+
 </resources>
