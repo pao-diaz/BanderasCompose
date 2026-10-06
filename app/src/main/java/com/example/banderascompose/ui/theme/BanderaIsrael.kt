@@ -1,7 +1,6 @@
 package com.example.banderascompose.ui.theme
 
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -12,51 +11,64 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import kotlin.math.cos
 import kotlin.math.sin
 
 @Composable
 fun BanderaIsrael(modifier: Modifier = Modifier) {
-    Canvas(
-        modifier = modifier.aspectRatio(11f / 8f)
+    ConstraintLayout(
+        modifier = modifier.fillMaxWidth()
     ) {
-        val azulIsrael = Color(0xFF0038B8)
-        val blanco = Color(0xFFFFFFFF)
+        val (canvas) = createRefs()
 
-        drawRect(color = blanco)
+        Canvas(
+            modifier = Modifier.constrainAs(canvas) {
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                width = Dimension.fillToConstraints
+                height = Dimension.ratio("11:8")
+            }
+        ) {
+            val azulIsrael = Color(0xFF0038B8)
+            val blanco = Color(0xFFFFFFFF)
 
+            drawRect(color = blanco)
 
-        val grosorFranja = size.height * 0.15f
-        drawRect(
-            color = azulIsrael,
-            topLeft = Offset(0f, grosorFranja),
-            size = Size(size.width, grosorFranja)
-        )
-        drawRect(
-            color = azulIsrael,
-            topLeft = Offset(0f, size.height - (grosorFranja * 2f)),
-            size = Size(size.width, grosorFranja)
-        )
+            val grosorFranja = size.height * 0.15f
+            drawRect(
+                color = azulIsrael,
+                topLeft = Offset(0f, grosorFranja),
+                size = Size(size.width, grosorFranja)
+            )
+            drawRect(
+                color = azulIsrael,
+                topLeft = Offset(0f, size.height - (grosorFranja * 2f)),
+                size = Size(size.width, grosorFranja)
+            )
 
+            val centroX = size.width / 2f
+            val centroY = size.height / 2f
+            val radio = size.height * 0.20f
+            val grosorLinea = size.height * 0.03f
 
-        val centroX = size.width / 2f
-        val centroY = size.height / 2f
-        val radio = size.height * 0.20f
-        val grosorLinea = size.height * 0.03f
+            val triArriba = crearTrianguloIsraelPath(centroX, centroY, radio, -90f)
+            val triAbajo = crearTrianguloIsraelPath(centroX, centroY, radio, 90f)
 
-        val triArriba = crearTrianguloIsraelPath(centroX, centroY, radio, -90f)
-        val triAbajo = crearTrianguloIsraelPath(centroX, centroY, radio, 90f)
-
-        drawPath(
-            path = triArriba,
-            color = azulIsrael,
-            style = Stroke(width = grosorLinea)
-        )
-        drawPath(
-            path = triAbajo,
-            color = azulIsrael,
-            style = Stroke(width = grosorLinea)
-        )
+            drawPath(
+                path = triArriba,
+                color = azulIsrael,
+                style = Stroke(width = grosorLinea)
+            )
+            drawPath(
+                path = triAbajo,
+                color = azulIsrael,
+                style = Stroke(width = grosorLinea)
+            )
+        }
     }
 }
 
@@ -81,6 +93,6 @@ fun crearTrianguloIsraelPath(cx: Float, cy: Float, r: Float, anguloRotacionDeg: 
 @Composable
 fun BanderaIsraelPreview() {
     Surface {
-        BanderaIsrael(modifier = Modifier.fillMaxWidth())
+        BanderaIsrael()
     }
 }
