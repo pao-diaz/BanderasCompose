@@ -10,21 +10,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 
-val AmarilloColombia = Color(0xFFFCD116)
-val AzulColombia = Color(0xFF003893)
-val RojoColombia = Color(0xFFCE1126)
-
 @Composable
-fun BanderaColombiaC(modifier: Modifier = Modifier) {
-    ConstraintLayout(modifier = modifier) {
-        val (amarillo, azul, rojo) = createRefs()
-        val lineaSup = createGuidelineFromBottom(0.5f)
-        val lineaInf = createGuidelineFromBottom(0.25f)
+fun BanderaAlemaniaC(modifier: Modifier = Modifier) {
+    ConstraintLayout(modifier = modifier.fillMaxSize()) {
+        val (negro, rojo, amarillo) = createRefs()
+        val lineaSup = createGuidelineFromTop(0.333f)
+        val lineaInf = createGuidelineFromTop(0.666f)
 
         Box(
             modifier = Modifier
-                .background(AmarilloColombia)
-                .constrainAs(amarillo) {
+                .background(Color.Black)
+                .constrainAs(negro) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     top.linkTo(parent.top)
@@ -36,8 +32,8 @@ fun BanderaColombiaC(modifier: Modifier = Modifier) {
 
         Box(
             modifier = Modifier
-                .background(AzulColombia)
-                .constrainAs(azul) {
+                .background(RojoAlemania)
+                .constrainAs(rojo) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     top.linkTo(lineaSup)
@@ -49,8 +45,8 @@ fun BanderaColombiaC(modifier: Modifier = Modifier) {
 
         Box(
             modifier = Modifier
-                .background(RojoColombia)
-                .constrainAs(rojo) {
+                .background(AmarilloAlemania)
+                .constrainAs(amarillo) {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     top.linkTo(lineaInf)
@@ -64,6 +60,8 @@ fun BanderaColombiaC(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun BanderaPreview() {
-    BanderaColombiaC(modifier = Modifier.fillMaxSize())
+fun BanderaAlemaniaPreview() {
+    BanderasComposeTheme {
+        BanderaAlemaniaC()
+    }
 }
