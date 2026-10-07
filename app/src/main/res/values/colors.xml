@@ -37,8 +37,11 @@
     <color name="naranja_butan">#FF6720</color>
     <color name="rojo_nepal">#DC143C</color>
     <color name="azul_nepal">#003893</color>
-    <color name="amarillo_kiribati">#FFD100</color>
-    <color name="rojo_kiribati">#EF3340</color>
-    <color name="azul_kiribati">#0032A0</color>
+    <color name="pixel_black">#1B1B1B</color>
+    <color name="pixel_pink">#F06292</color>
+    <color name="pixel_yellow">#FFD54F</color>
+    <color name="pixel_white">#FFFFFF</color>
+    <color name="pixel_grid">#CCCCCC</color>
+
 
 </resources>

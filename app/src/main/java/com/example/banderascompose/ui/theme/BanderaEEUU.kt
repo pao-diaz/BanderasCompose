@@ -1,6 +1,5 @@
 package com.example.banderascompose.ui.theme
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -22,8 +21,6 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.example.banderascompose.R
-import com.example.banderascompose.ui.theme.BanderaPreview
-
 
 @Composable
 fun C1(modifier: Modifier = Modifier) {
@@ -67,11 +64,9 @@ fun C2(modifier: Modifier = Modifier) {
     }
 }
 
-
 @Composable
 fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
-    ConstraintLayout(modifier = Modifier.fillMaxSize())
-    {
+    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val (franjas, cuadroAzul) = createRefs()
         val lineAzulAltura = createGuidelineFromTop(7f / 13f)
         val lineAzulAncho = createGuidelineFromStart(0.4f)
@@ -82,7 +77,6 @@ fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
                 bottom.linkTo(parent.bottom)
                 start.linkTo(parent.start)
                 end.linkTo(parent.end)
-
                 width = Dimension.fillToConstraints
                 height = Dimension.fillToConstraints
             }
@@ -105,9 +99,8 @@ fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
                 .constrainAs(cuadroAzul) {
                     top.linkTo(parent.top)
                     start.linkTo(parent.start)
-                    bottom.linkTo(lineAzulAltura)     // Anclado a la guía del 53.8%
-                    end.linkTo(lineAzulAncho)        // Anclado a la guía del 40%
-
+                    bottom.linkTo(lineAzulAltura)
+                    end.linkTo(lineAzulAncho)
                     width = Dimension.fillToConstraints
                     height = Dimension.fillToConstraints
                 },
@@ -127,12 +120,10 @@ fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
     }
 }
 
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun BanderaPrevie() {
-    BanderasComposeTheme() {
+    BanderasComposeTheme {
         BanderaEstadosUnidosC()
     }
 }
-
