@@ -1,47 +1,34 @@
-package com.example.banderascompose.ui.theme
+package com.example.banderascompose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-
-val AmarilloColombia = Color(0xFFFCD116)
-val AzulColombia = Color(0xFF003893)
-val RojoColombia = Color(0xFFCE1126)
+import com.example.banderascompose.ui.theme.AzulFrancia
+import com.example.banderascompose.ui.theme.BanderasComposeTheme
+import com.example.banderascompose.ui.theme.RojoFrancia
 
 @Composable
-fun BanderaColombiaC(modifier: Modifier = Modifier) {
-    ConstraintLayout(modifier = modifier) {
-        val (amarillo, azul, rojo) = createRefs()
-        val lineaSup = createGuidelineFromBottom(0.5f)
-        val lineaInf = createGuidelineFromBottom(0.25f)
+fun BanderaFranciaC(modifier: Modifier = Modifier) {
+    ConstraintLayout(modifier = modifier.fillMaxSize()) {
+        val (azul, blanco, rojo) = createRefs()
+        val lineguia1 = createGuidelineFromStart(0.333f)
+        val lineguia2 = createGuidelineFromStart(0.666f)
 
         Box(
             modifier = Modifier
-                .background(AmarilloColombia)
-                .constrainAs(amarillo) {
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    top.linkTo(parent.top)
-                    bottom.linkTo(lineaSup)
-                    height = Dimension.fillToConstraints
-                    width = Dimension.fillToConstraints
-                }
-        )
-
-        Box(
-            modifier = Modifier
-                .background(AzulColombia)
+                .background(AzulFrancia)
                 .constrainAs(azul) {
                     start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                    top.linkTo(lineaSup)
-                    bottom.linkTo(lineaInf)
+                    end.linkTo(lineguia1)
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
                     height = Dimension.fillToConstraints
                     width = Dimension.fillToConstraints
                 }
@@ -49,11 +36,25 @@ fun BanderaColombiaC(modifier: Modifier = Modifier) {
 
         Box(
             modifier = Modifier
-                .background(RojoColombia)
+                .background(Color.White)
+                .constrainAs(blanco) {
+                    start.linkTo(lineguia1)
+                    end.linkTo(lineguia2)
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    height = Dimension.fillToConstraints
+                    width = Dimension.fillToConstraints
+                },
+            contentAlignment = Alignment.Center
+        ) {}
+
+        Box(
+            modifier = Modifier
+                .background(RojoFrancia)
                 .constrainAs(rojo) {
-                    start.linkTo(parent.start)
+                    start.linkTo(lineguia2)
                     end.linkTo(parent.end)
-                    top.linkTo(lineaInf)
+                    top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
                     height = Dimension.fillToConstraints
                     width = Dimension.fillToConstraints
@@ -65,5 +66,7 @@ fun BanderaColombiaC(modifier: Modifier = Modifier) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun BanderaPreview() {
-    BanderaColombiaC(modifier = Modifier.fillMaxSize())
+    BanderasComposeTheme {
+        BanderaFranciaC()
+    }
 }
